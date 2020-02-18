@@ -1,5 +1,7 @@
 package tempconv
 
+import "fmt"
+
 // Celsius represent the temperature in Celsius
 type Celsius float64
 
@@ -29,3 +31,5 @@ func KtoC(k Kelvin) Celsius { return Celsius(k - 273.15) }
 
 // CtoK converts celsius to kelvin
 func CtoK(c Celsius) Kelvin { return Kelvin(c + 273.15) }
+
+func (c Celsius) String() string { return fmt.Sprintf("%g°C", c) }
